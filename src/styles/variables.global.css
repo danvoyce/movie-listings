@@ -1,0 +1,27 @@
+:root {
+  --baseline: 8px;
+
+  /*
+  * General spacing
+  */
+  --tiny-spacing: var(--baseline); /* 8px  - tiny */
+  --x-small-spacing: calc(var(--baseline) * 2); /* 16px - small */
+  --small-spacing: calc(var(--baseline) * 3); /* 24px - small */
+  --medium-spacing: calc(var(--baseline) * 4); /* 32px - medium */
+  --large-spacing: calc(var(--baseline) * 6); /* 48px - large */
+  --x-large-spacing: calc(var(--baseline) * 8); /* 64px - x-large */
+  --feature-spacing: calc(var(--baseline) * 12); /* 96px - feature */
+
+  /*
+  * Layout sizes
+  */
+  --l-width-max: 1440px;
+  --l-width-narrow: 498px;
+
+  /*
+  * Grid gutter
+  */
+  --gutter-mobile: var(--baseline); /* 8px   - mobile */
+  --gutter-tablet: calc(var(--baseline) * 2); /* 16px  - tablet */
+  --gutter-desktop: calc(var(--baseline) * 4); /* 24px  - desktop */
+}
