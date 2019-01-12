@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 import { fetchMovies } from "../../appState/movies/movies.actions";
 
 import movies from "./MoviesList.fixture";
+import styles from "./MovieList.module.css";
+import posterImage from "../../images/poster-image.jpg";
+
+console.log("movies:", movies);
 
 class Explorer extends Component {
   static propTypes = {};
@@ -16,12 +20,16 @@ class Explorer extends Component {
 
   render() {
     return (
-      <ol className="moviesList layoutGrid">
+      <ol className={styles.moviesList}>
         {movies.map(movie => {
-          // console.log("movie:", movie);
           return (
-            <li key={movie.id} className="movieItem">
-              {movie.title}
+            <li key={movie.id} className={styles.movieItem}>
+              <img
+                src={posterImage}
+                className={styles.posterImage}
+                alt={`Movie poster for ${movie.title}`}
+              />
+              <span className={styles.movieTitle}>{movie.title}</span>
             </li>
           );
         })}

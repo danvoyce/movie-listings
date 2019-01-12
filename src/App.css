@@ -6,18 +6,3 @@ body {
   background: #000;
   color: #fff;
 }
-
-.moviesList {
-  width: 100%;
-  max-width: 900px;
-  padding: 20px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.movieItem {
-  list-style: none;
-  background: #ab0d86;
-  min-height: 100px;
-}

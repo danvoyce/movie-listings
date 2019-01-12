@@ -1,0 +1,59 @@
+.moviesList {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+  display: grid;
+  grid-gap: 10px;
+
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: 500px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.movieItem {
+  list-style: none;
+  background: #ab0d86;
+  padding: 20px;
+
+  &:nth-child(1n) {
+    background: #ffe107;
+  }
+
+  &:nth-child(2n) {
+    background: #47fcba;
+  }
+
+  &:nth-child(3n) {
+    background: #f03580;
+  }
+
+  &:nth-child(4n) {
+    background: #26bdff;
+  }
+
+  &:nth-child(5n) {
+    background: #ff9900;
+  }
+}
+
+.posterImage {
+  width: 100%;
+  box-shadow: 0 18px 13px -11px rgba(0, 0, 0, 0.5);
+}
+
+.movieTitle {
+  margin-top: 10px;
+  display: block;
+  color: #000;
+}
