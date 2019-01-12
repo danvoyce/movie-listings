@@ -6,6 +6,10 @@ import appState from "./reducers";
 
 import MoviesList from "./components/MoviesList/MoviesList";
 
+import "./styles/variables.global.css";
+import "./styles/breakpoints.global.css";
+import "./App.css";
+
 /* eslint-disable-next-line */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
