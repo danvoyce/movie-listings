@@ -1,0 +1,12 @@
+.genresList {
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.genreItem {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
