@@ -2,7 +2,7 @@ import * as TYPES from "./genres.types";
 import * as api from "../../api/api";
 
 export const fetchGenres = () => dispatch => {
-  api
+  return api
     .fetchGenres()
     .then(res => res.json())
     .then(data => {
@@ -17,5 +17,11 @@ export const toggleGenre = id => dispatch => {
   dispatch({
     type: TYPES.TOGGLE_GENRE,
     id
+  });
+};
+
+export const toggleCheckAll = () => dispatch => {
+  dispatch({
+    type: TYPES.TOGGLE_CHECK_ALL
   });
 };

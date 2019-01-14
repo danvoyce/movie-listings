@@ -6,4 +6,10 @@ const fetchMovies = () => {
   );
 };
 
-export { fetchMovies };
+const fetchGenres = () => {
+  return fetch(
+    `${BASE_URL}/genre/movie/list?api_key=09991eb2985bce3334ee07e936171ea8`
+  );
+};
+
+export { fetchMovies, fetchGenres };
