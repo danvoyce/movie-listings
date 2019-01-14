@@ -1,6 +1,8 @@
 import * as TYPES from "./movies.types";
 
-const initialState = {};
+const initialState = {
+  all: []
+};
 
 export default (state = initialState, action) => {
   const { type, results } = action;
@@ -8,7 +10,7 @@ export default (state = initialState, action) => {
     case TYPES.ADD_MOVIES:
       return {
         ...state,
-        results
+        all: results
       };
     default:
       return state;

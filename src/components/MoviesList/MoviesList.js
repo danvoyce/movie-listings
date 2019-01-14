@@ -39,12 +39,18 @@ class Explorer extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("state:", state);
+  const {
+    movies: { all: moviesList },
+    genres: { all: genresList }
+  } = state;
 
-  return {};
+  return {
+    moviesList,
+    genresList
+  };
 };
 
 export default connect(
   mapStateToProps,
-  { fetchMovies }
-)(Explorer);
+  {}
+)(MoviesList);

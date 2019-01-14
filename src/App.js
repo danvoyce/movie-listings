@@ -4,8 +4,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import appState from "./reducers";
 
-import GenreToggles from "./components/GenreToggles/GenreToggles";
-import MoviesList from "./components/MoviesList/MoviesList";
+import HomePage from "./screens/Home/Home";
 
 import "./styles/variables.global.css";
 import "./styles/breakpoints.global.css";
@@ -23,8 +22,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <GenreToggles />
-        <MoviesList />
+        <HomePage />
       </Provider>
     );
   }

@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import {
-  fetchGenres,
-  toggleGenre,
-  toggleCheckAll
-} from "../../appState/genres/genres.actions";
+import { toggleGenre } from "../../appState/genres/genres.actions";
 
 import styles from "./GenreToggles.module.css";
 
@@ -14,9 +10,7 @@ class GenreToggles extends Component {
 
   static defaultProps = {};
 
-  componentDidMount() {
-    this.props.fetchGenres().then(() => this.props.toggleCheckAll());
-  }
+  componentDidMount() {}
 
   render() {
     const { selected, genresList, toggleGenre, toggleCheckAll } = this.props;
@@ -65,5 +59,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { toggleGenre, fetchGenres, toggleCheckAll }
+  { toggleGenre }
 )(GenreToggles);
